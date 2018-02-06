@@ -518,3 +518,13 @@ bool ALEState::equals(ALEState &rhs) {
     rhs.m_mode == this->m_mode &&
     rhs.m_difficulty == this->m_difficulty);
 }
+
+bool ALEState::equals(const ALEState &rhs) const {
+  return (rhs.m_serialized_state == this->m_serialized_state &&
+    rhs.m_left_paddle == this->m_left_paddle &&
+    rhs.m_right_paddle == this->m_right_paddle &&
+    rhs.m_frame_number == this->m_frame_number &&
+    rhs.m_episode_frame_number == this->m_episode_frame_number &&
+    rhs.m_mode == this->m_mode &&
+    rhs.m_difficulty == this->m_difficulty);
+}

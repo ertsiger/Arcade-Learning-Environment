@@ -48,6 +48,7 @@ class ALEState {
 
     /** Returns true if the two states contain the same saved information */
     bool equals(ALEState &state);
+    bool equals(const ALEState &state) const;
 
     void resetPaddles(Event*);
 
