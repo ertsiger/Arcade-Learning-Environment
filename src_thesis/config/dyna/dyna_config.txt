@@ -1,0 +1,40 @@
+; General Parameters
+display_screen = 0
+max_num_episodes = 5
+max_num_frames_per_episode = 15000
+frame_skip = 10
+player_agent = dyna_agent
+num_games = 1
+rom_file_0 = ../roms/breakout.bin
+
+; Parameters of LFA
+lfa_normalize = 1
+lfa_optimistic_initialization = 1
+lfa_export_function = 1
+lfa_export_route = export/
+lfa_import_function = 0
+lfa_import_route = export/sarsa_30000.txt
+lfa_policy_frozen = 0
+
+; Dyna
+dyna_p_alpha = 0.1
+dyna_t_alpha = 0.1
+dyna_p_epsilon = 0.01
+dyna_t_epsilon = 0.01
+dyna_max_frames_search = 100
+dyna_max_search_iterations = 1
+
+; Search Agent Configuration (UCT Algorithm)
+uct_explore_multiplier = 0.01
+uct_simulations_per_node = 100
+uct_selection_criteria = max_child
+uct_num_simulated_frames = 100
+uct_use_amaf_selection = 0
+uct_rave_param = 250
+
+; Export Scores/Images
+export_frame_images = 1
+export_frame_images_route = config/dyna/
+export_scores = 1
+export_route = config/dyna/breakout.txt
+print_scores = 1

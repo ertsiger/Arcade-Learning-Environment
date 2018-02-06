@@ -1,0 +1,25 @@
+; General parameters
+display_screen = 0
+use_environment_distribution = 1
+max_num_episodes = 5
+max_num_frames_per_episode = 15000
+frame_skip = 10
+player_agent = search_agent
+num_games = 1
+rom_file_0 = ../roms/pooyan.bin
+
+; Search Agent Configuration (UCT Algorithm)
+uct_explore_multiplier = 0.01
+uct_simulations_per_node = 175
+uct_selection_criteria = max_child
+uct_num_simulated_frames = 200
+uct_use_amaf_selection = 0
+uct_use_discount_factor = 1
+uct_discount_factor = 0.999
+
+; Export Scores/Images
+export_frame_images = 1
+export_frame_images_route = config/uct/
+export_scores = 1
+export_route = config/uct/scores.txt
+print_scores = 1

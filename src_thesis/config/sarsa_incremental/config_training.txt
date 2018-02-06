@@ -1,0 +1,28 @@
+; General parameters
+display_screen = 0
+use_environment_distribution = 1
+max_num_episodes = 20000
+max_num_frames_per_episode = 18000
+frame_skip = 5
+player_agent = ram_incremental_agent
+num_games = 1
+rom_file_0 = ../roms/space_invaders.bin
+
+num_feature_groups = 100
+num_feature_change_episodes = 50000
+
+; Parameters of LFA
+lfa_normalize = 1
+lfa_optimistic_initialization = 1
+lfa_export_function = 1
+lfa_export_route = config/sarsa_incremental/
+lfa_import_function = 0
+lfa_policy_frozen = 0
+
+sarsa_alpha = 0.1
+sarsa_epsilon = 0.01
+sarsa_gamma = 0.999
+
+export_scores = 1
+export_route = config/sarsa_incremental/scores_training.txt
+print_scores = 1

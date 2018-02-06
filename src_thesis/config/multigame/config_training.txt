@@ -1,0 +1,32 @@
+; General Parameters
+use_environment_distribution = 1
+display_screen = 0
+max_num_episodes = 30000
+max_num_frames_per_episode = 15000
+frame_skip = 10
+player_agent = ram_agent
+num_games = 2
+rom_file_0 = ../roms/alien.bin
+rom_file_1 = ../roms/atlantis.bin
+game_selection_method = ascending_order
+agent_end_method = some_game
+use_scaled_rewards = 1
+
+; Parameters of LFA
+lfa_normalize = 1
+lfa_optimistic_initialization = 1
+lfa_export_function = 1
+lfa_export_route = config/multigame/
+lfa_import_function = 0
+lfa_policy_frozen = 0
+
+; RAM Agent Configuration (Sarsa Algorithm)
+sarsa_alpha = 0.1
+sarsa_epsilon = 0.01
+sarsa_gamma = 0.999
+sarsa_lambda = 0
+
+; Export Scores/Images
+export_scores = 1
+export_route = config/multigame/scores_training.txt
+print_scores = 1

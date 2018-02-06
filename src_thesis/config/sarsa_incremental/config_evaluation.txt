@@ -1,0 +1,25 @@
+; General parameters
+display_screen = 0
+use_environment_distribution = 1
+max_num_episodes = 1000
+max_num_frames_per_episode = 15000
+frame_skip = 10
+player_agent = ram_agent
+num_games = 1
+rom_file_0 = ../roms/pooyan.bin
+
+; Parameters of LFA
+lfa_normalize = 1
+lfa_optimistic_initialization = 1
+lfa_export_function = 0
+lfa_import_function = 1
+lfa_import_route = config/sarsa_incremental/sarsa_30000.txt
+lfa_policy_frozen = 1
+
+sarsa_alpha = 0.1
+sarsa_epsilon = 0.01
+sarsa_gamma = 0.999
+
+export_scores = 1
+export_route = config/sarsa_incremental/scores_eval.txt
+print_scores = 1
